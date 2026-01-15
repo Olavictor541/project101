@@ -6,42 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/output.css">
 </head>
-<body class="bg-sky-500">
+<body class="bg-gray-100 min-h-screen">
     <!--Container-->
-    <div class="flex min-h-screen ">
+    <div class="flex min-h-screen">
         <!--Sidebar-->
-        <div class="flex-col w-64 bg-white p-4 rounded ">
-            <nav class="flex flex-col gap-2">
-                <a href="#" class="py-2 px-4 rounded hover:bg-sky-200">Home</a>
-                <a href="#" class="py-2 px-4 rounded hover:bg-sky-200">Profile</a>
-                <a href="#" class="py-2 px-4 rounded hover:bg-sky-200">Settings</a>
-                <a href="#" class="py-2 px-4 rounded hover:bg-sky-200">Logout</a>
-            </nav>
-        </div>
-        <!--Dashboard-->
+        <aside class="flex flex-col p-4 w-64 justify-between bg-white">
+            <!--Logo & Menu-->
+            <div>
+                <div class="mb-6 font-bold text-xl">TheOVMProject</div>
+
+                <nav class="space-y-5">
+                    <a class="block p-2 rounded" href="#">Dashboard</a>
+                    <a class="block p-2 rounded" href="#">Leaderboard</a>
+                    <a class="block p-2 rounded" href="#">Order</a>
+                    <a class="block p-2 rounded" href="#">Products</a>
+                    <a class="block p-2 rounded" href="#">Sign Out</a>
+                </nav>
+            </div>
+
+            <!--Promo-->
+            <div class="rounded bg-sky-400">
+                Promo Card
+            </div>
+        </aside>
+        <!--Main Board-->
         <div class="flex-1 flex-col">
             <!--Top bar-->
             <div class="flex items-center justify-between bg-white">
                 Top bar
             </div>
             <!--Small Cards-->
-            <div class="flex gap-x-3">
+            <div class="flex gap-x-3 overflow-hidden">
                 <div class="bg-white m-4 shadow-md rounded flex-1">
-                    Card 1
+                    <div class="justify-center flex">Card 1</div>
+                    <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ad, corrupti veniam ipsa enim fuga illum voluptatibus veritatis harum quibusdam.</p>
                 </div>
                 <div class="bg-white m-4 shadow-md rounded flex-1">
-                    Card 2
+                    <div class="justify-center flex">Card 2</div>
+                    <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ad, corrupti veniam ipsa enim fuga illum voluptatibus veritatis harum quibusdam.</p>
                 </div>
                 <div class="bg-white m-4 shadow-md rounded flex-1">
-                    Card 3
+                    <div class="justify-center flex">Card 3</div>
+                    <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ad, corrupti veniam ipsa enim fuga illum voluptatibus veritatis harum quibusdam.</p>
                 </div>
                 <div class="bg-white m-4 shadow-md rounded flex-1">
-                    Card 4
+                    <div class="justify-center flex">Card 4</div>
+                    <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ad, corrupti veniam ipsa enim fuga illum voluptatibus veritatis harum quibusdam.</p>
                 </div>
             </div>
             <!--Big Content-->
-            <div>
-
+            <div class="flex gap-x-3 mx-4">
+                <img class="aspect-video" src="https://imgs.search.brave.com/uLESKrnAv-rDL4pQ_zO6wXPKiHCFbwkkPfweQDHUsvs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjAv/MTE0LzYzMC9zbWFs/bC9tb2JpbGUtdWkt/dXgtZGV2ZWxvcG1l/bnQtZGVzaWduLWNv/bmNlcHQtd2l0aC1j/aGFyYWN0ZXJzLWRp/Z2l0YWwtaW5kdXN0/cnktbW9iaWxlLWFw/cC1pbm5vdmF0aW9u/LWFuZC10ZWNobm9s/b2dpZXMtbW9kZXJu/LWZsYXQtc3R5bGUt/Zm9yLWxhbmRpbmct/cGFnZS13ZWItYmFu/bmVyLWluZm9ncmFw/aGljcy1oZXJvLWlt/YWdlcy12ZWN0b3Iu/anBn">
             </div>
         </div>
     </div>
