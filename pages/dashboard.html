@@ -13,14 +13,14 @@
         <aside class="flex flex-col p-4 w-64 justify-between bg-white">
             <!--Logo & Menu-->
             <div>
-                <div class="mb-6 font-bold text-xl">TheOVMProject</div>
+                <div class="mb-6 font-bold text-l">TheOVMProject</div>
 
                 <nav class="space-y-5">
-                    <a class="block p-2 rounded" href="#">Dashboard</a>
-                    <a class="block p-2 rounded" href="#">Leaderboard</a>
-                    <a class="block p-2 rounded" href="#">Order</a>
-                    <a class="block p-2 rounded" href="#">Products</a>
-                    <a class="block p-2 rounded" href="#">Sign Out</a>
+                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Dashboard</a>
+                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Leaderboard</a>
+                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Order</a>
+                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Products</a>
+                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Sign Out</a>
                 </nav>
             </div>
 
@@ -29,12 +29,28 @@
                 Promo Card
             </div>
         </aside>
+
         <!--Main Board-->
-        <div class="flex-1 flex-col">
+        <main class="flex-1 flex-col">
             <!--Top bar-->
-            <div class="flex items-center justify-between bg-white">
-                Top bar
+            <div class="flex items-center justify-between bg-white p-2">
+                <div class="font-bold text-xl">Dashboard</div>
+
+                <!--search bar-->
+                <div class="bg-gray-300 border focus-within:border-sky-500 flex items-center px-2 py-1 rounded-l">
+                    <img src="../assets/icons/magnifying-glass.svg" class="w-4 h-4">
+                    <input
+                        class="placeholder: italic px-2 bg-transparent outline-none"
+                        type="text"
+                        placeholder="search here..."
+                        name="search"
+                    >
+                </div>
+                
+                
             </div>
+
+
             <!--Small Cards-->
             <div class="flex gap-x-3 overflow-hidden">
                 <div class="bg-white m-4 shadow-md rounded flex-1">
@@ -58,7 +74,7 @@
             <div class="flex gap-x-3 mx-4">
                 <img class="aspect-video" src="https://imgs.search.brave.com/uLESKrnAv-rDL4pQ_zO6wXPKiHCFbwkkPfweQDHUsvs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjAv/MTE0LzYzMC9zbWFs/bC9tb2JpbGUtdWkt/dXgtZGV2ZWxvcG1l/bnQtZGVzaWduLWNv/bmNlcHQtd2l0aC1j/aGFyYWN0ZXJzLWRp/Z2l0YWwtaW5kdXN0/cnktbW9iaWxlLWFw/cC1pbm5vdmF0aW9u/LWFuZC10ZWNobm9s/b2dpZXMtbW9kZXJu/LWZsYXQtc3R5bGUt/Zm9yLWxhbmRpbmct/cGFnZS13ZWItYmFu/bmVyLWluZm9ncmFw/aGljcy1oZXJvLWlt/YWdlcy12ZWN0b3Iu/anBn">
             </div>
-        </div>
+        </main>
     </div>
 
 </body>
