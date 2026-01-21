@@ -15,12 +15,49 @@
             <div>
                 <div class="mb-6 font-bold text-l">TheOVMProject</div>
 
-                <nav class="space-y-5">
-                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Dashboard</a>
-                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Leaderboard</a>
-                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Order</a>
-                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Products</a>
-                    <a class="block p-2 rounded hover:bg-sky-400" href="#">Sign Out</a>
+                <nav class="space-y-5 text-[13px]">
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/chart-pie.svg" class="w-4 h-4">
+                        </div>
+                        Dashboard
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/chart-bar.svg" class="w-4 h-4">
+                        </div>
+                        Leaderboard
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/shopping-cart.svg" class="w-4 h-4">
+                        </div>
+                        Order
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/shopping-bag.svg" class="w-4 h-4">
+                        </div>
+                        Products
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/chat-bubble-left-ellipsis.svg" class="w-4 h-4">
+                        </div>
+                        Messages
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/cog-6-tooth.svg" class="w-4 h-4">
+                        </div>
+                        Settings
+                    </a>
+                    <a class="p-2 rounded hover:bg-sky-400 flex" href="#">
+                        <div class="px-3 flex items-center">
+                            <img src="../assets/icons/arrow-right-start-on-rectangle.svg" class="w-4 h-4">
+                        </div>
+                        Sign Out
+                    </a>
                 </nav>
             </div>
 
@@ -37,7 +74,7 @@
                 <div class="font-bold text-xl">Dashboard</div>
 
                 <!--search bar-->
-                <div class="bg-gray-300 border focus-within:border-sky-500 flex items-center px-2 py-1 rounded-l">
+                <div class="bg-gray-300 border focus-within:border-sky-500 flex items-center px-2 py-1 rounded-[4px]">
                     <img src="../assets/icons/magnifying-glass.svg" class="w-4 h-4">
                     <input
                         class="placeholder: italic px-2 bg-transparent outline-none"
@@ -45,6 +82,40 @@
                         placeholder="search here..."
                         name="search"
                     >
+                </div>
+
+                
+                
+
+                <div class="flex items-center">
+                    <!--language-->
+                    <div class="flex items-center text-sm">
+                        <img src="../assets/icons/globe-americas.svg" class="w-4 h-4">
+                        <p class="px-1">Eng (US)</p>
+                        <img src="../assets/icons/chevron-down.svg" class="w-3 h-3">
+                    </div>
+
+                    <!--bell alert-->
+                    <div class="rounded hover:bg-yellow-100 p-2 mx-4">
+                        <img src="../assets/icons/bell-alert.svg" class="w-4 h-4">
+                    </div>
+
+                    <!--profile container-->
+                    <div class="flex items-center space-x-1">
+                        <div class="rounded bg-sky-300 p-2">
+                            <img src="../assets/icons/user.svg" class="w-4 h-4">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <p class="font-bold text-[10px]">Victor</p>
+                            <p class="text-gray-400 text-[8px]">Admin</p>
+                        </div>
+
+                    </div>
+
+                    <div class="p-4">
+                        <img src="../assets/icons/chevron-down.svg" class="w-3 h-3">
+                    </div>
                 </div>
                 
                 
