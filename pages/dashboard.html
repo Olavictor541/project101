@@ -80,7 +80,7 @@
         </aside>
 
         <!--Main Board-->
-        <main class="flex-1 flex-col">
+        <main class="flex-1">
             <!--Top bar-->
             <div class="flex items-center justify-between bg-white p-2">
                 <div class="font-bold text-xl">Dashboard</div>
@@ -134,22 +134,55 @@
             </div>
 
 
-            <!--Small Cards-->
-            <div class="flex gap-x-3 overflow-hidden">
-                <div class="bg-white m-4 shadow-md rounded flex-1 p-4 justify-between">
-                    <div>
-                        <div>Today's Sales</div>
-                        <p class="">Sales Summary</p>
+            <div class="flex m-5 overflow-hidden">
+                <!--Sales-->
+                <div class="flex bg-white flex-col rounded p-5">
+                    <div class="flex justify-between">
+                        <p class="font-bold">Today's Sales</p>
+
+                        <div class="border rounded p-1 text-sm flex items-center">
+                            <img src="../assets/icons/arrow-up-tray.svg" class="w-4 h-4">
+                            <p class="px-1">Export</p>
+                        </div>
                     </div>
-                
-                    <div>Export</div>
+
+                    <p class="text-sm text-gray-400">Sales Summary</p>
+
+                    <!--Small cards-->
+                    <div class="flex mt-6 justify-between space-x-4">
+                        <div class="rounded flex flex-col bg-red-200 p-2 space-y-2">
+                            <img src="../assets/icons/chart-bar-square.svg" class="w-5 h-5 bg-red-400 rounded">
+                            <p class="font-bold">$1k</p>
+                            <p class="font-thin text-[12px]">Total Sales</p>
+                            <p class="text-[10px] text-blue-500">+8% from yesterday</p>
+                        </div>
+                        <div class="rounded flex flex-col bg-orange-200 p-2 space-y-2">
+                            <img src="../assets/icons/document-text.svg" class="w-5 h-5 bg-orange-300 rounded">
+                            <p class="font-bold">300</p>
+                            <p class="font-thin text-[12px]">Total Order</p>
+                            <p class="text-[10px] text-blue-500">+8% from yesterday</p>
+                        </div>
+                        <div class="rounded flex flex-col bg-green-200 p-2 space-y-2">
+                            <img src="../assets/icons/tag.svg" class="w-5 h-5 bg-green-500 rounded">
+                            <p class="font-bold">5</p>
+                            <p class="font-thin text-[12px]">Product Sold</p>
+                            <p class="text-[10px] text-blue-500">+8% from yesterday</p>
+                        </div>
+                        <div class="rounded flex flex-col bg-purple-200 p-2 space-y-2">
+                            <img src="../assets/icons/user-plus.svg" class="w-5 h-5 bg-purple-300 rounded">
+                            <p class="font-bold">8</p>
+                            <p class="font-thin text-[12px]">New Customer</p>
+                            <p class="text-[10px] text-blue-500">+8% from yesterday</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="bg-white m-4 shadow-md rounded flex-1">
-                    <div class="justify-center flex">Card 2</div>
-                    <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ad, corrupti veniam ipsa enim fuga illum voluptatibus veritatis harum quibusdam.</p>
+
+                <!--Insights-->
+                <div class="bg-white">
+
                 </div>
             </div>
+
             <!--Big Content-->
             
         </main>
