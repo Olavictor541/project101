@@ -9,8 +9,16 @@
 <body class="bg-gray-100 min-h-screen">
     <!--Container-->
     <div class="flex min-h-screen">
+
+        <div class="bg-white">
+            <button onclick="toggleMenu()" class="m-2 p-2  rounded hover:bg-gray-100">
+                <img src="../assets/icons/bars-3.svg" class="w-6 h-6">
+            </button>
+        </div>
+        
+
         <!--Sidebar-->
-        <aside class="flex flex-col p-4 w-64 space-y-40 bg-white">
+        <aside id="sideBar" class="hidden flex-col p-4 w-64 justify-between bg-white">
             <!--Logo & Menu-->
             <div>
                 <div class="mb-6 font-bold text-l flex space-x-2">
@@ -187,6 +195,6 @@
             
         </main>
     </div>
-
+    <script src="sidebar.js"></script>
 </body>
 </html>
