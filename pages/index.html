@@ -5,47 +5,59 @@
     <title>Project 101</title>
     <link rel="stylesheet" href="../styles/output.css" />
   </head>
+
   <body class="bg-sky-500">
     <!-- Page container -->
     <div class="min-h-screen flex items-center justify-center px-4">
 
       <!--Card-->
       <div class="w-full max-w-sm md:max-w-sm bg-white rounded-3xl shadow-md p-8">
-            <div class="font-semibold text-sm">Hello!</div>
-            <p class="mt-2">Sign up to get started</p>
+        <h1 class="font-semibold text-sm">Hello!</h1>
+          <p class="mt-2">Sign up to get started</p>
 
+          <!--Form-->
+          <form id="loginForm" class="mt-6 space-y-4">
             <!--Email-->
-            <div class="mt-4 border rounded-full focus-within:border-sky-200">
+            <div>
               <input
+                id="email"
                 type="email"
                 placeholder=" Email Address"
-                class="w-full p-3  outline-none"
+                class="w-full p-3  outline-none border rounded-full"
               >
+              <!--Error message-->
+              <p id="emailError" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
 
             <!--Password-->
-            <div class="mt-6 border rounded-full focus-within:border-sky-200">
-                <input
-                    type="password"
-                    placeholder="Password"
-                    class="w-full p-3  outline-none"
-                >
+            <div>
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                class="w-full p-3  outline-none rounded-full border"
+              >
+              <p id="passwordError" class="text-red-500 text-xs mt-1 hidden"></p>
             </div>
 
-            <a href="dashboard.html">
-              <button class="mt-6 w-full rounded-full bg-sky-400 py-4 active:bg-sky-600 hover:bg-sky-500">
-                Login
-              </button>
+            <button type="submit" class="mt-6 w-full rounded-full bg-sky-400 py-4 active:bg-sky-600 hover:bg-sky-500">
+              Login
+            </button>
+            
+          </form>
+          
+          
+          <p class="mt-4">
+            Don't have an account?
+            <a class="font-semibold hover:underline" href="#">
+              Sign up now
             </a>
-            
-            
-            <p class="mt-4">
-                Don't have an account?
-                <a class="font-semibold hover:underline" href="#">
-                    Sign up now
-                </a>
-            </p>
-       </div>
+          </p>
+
+        </div>
+      </div>
     </div>
+
+    <script type="module" src="../js/login.js"></script>
   </body>
 </html>
