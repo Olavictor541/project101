@@ -1,6 +1,6 @@
 // bring everything all together
 
-import { isEmailVaid, isPasswordValid } from "./validator.js";
+import { isPasswordValid, isEmailValid} from "./validator.js";
 import { login } from "./auth.js";
 import { showError, clearError } from "./display.js";
 
@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     let hasError = false;
 
     //check email and password
-    if (!isEmailVaid(email)){
+    if (!isEmailValid(email)){
         showError(emailError, "Please enter a valid email address");
         hasError = true;
     }
