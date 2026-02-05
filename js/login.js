@@ -1,47 +1,50 @@
-// bring everything all together
-
-import { isPasswordValid, isEmailValid} from "./validator.js";
-import { login } from "./auth.js";
+// import helper functions from other files
+import { isEmailValid, isPasswordValid } from "./validator.js";
 import { showError, clearError } from "./display.js";
+import { login } from "./auth.js";
 
-const form = document.getElementById("loginForm");
-const passwordInput = document.getElementById("password");
+// declare and assign variables
 const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const form = document.getElementById("loginForm");
 
-const passwordError = document.getElementById("passwordError");
+// get the error id to display it in
 const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
 
-
+// start an event listener for the form to listen for submission
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // don't reload page
+    event.preventDefault(); // prevent page from reloading while verification is taking place
 
     clearError(emailError);
     clearError(passwordError);
 
+
+    //remove any unnecessary space that is in emailInput / passwordInput
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
+
     let hasError = false;
 
-    //check email and password
-    if (!isEmailValid(email)){
+    // validate the email and password
+    if(!isEmailValid(email)){
         showError(emailError, "Please enter a valid email address");
         hasError = true;
     }
 
-    if (!isPasswordValid(password)){
+    if(!isPasswordValid(password)){
         showError(passwordError, "Please enter a valid password");
         hasError = true;
     }
 
-    const isAuthenticated = login(email, password);
-
-    if(!isAuthenticated){
-        showError(passwordError, "Invalid email or password");
+    // if the email and password are not the right one, display error
+    if(!login(email, password)){
+        showError(passwordError, "Please enter a valid email or password");
         return;
     }
 
-    // else if successful, login
     window.location.href = "../pages/dashboard.html"
 
 });
+
