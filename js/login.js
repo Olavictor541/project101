@@ -44,7 +44,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    window.location.href = "../pages/dashboard.html"
+    window.location.href = "pages/dashboard.html";
 
 });
 
