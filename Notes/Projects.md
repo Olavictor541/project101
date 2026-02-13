@@ -150,32 +150,6 @@ By the end of Project 1, you should be able to honestly say:
     - What happens when a user logs in
         
     - Where attacks usually happen
-        
-
-**Engineering Mindset**
-
-- You don’t jump straight into code
-    
-- You sketch first
-    
-- You break problems into components
-    
-
-### What Your Project 1 _Feels Like_
-
-- A **secure login**
-    
-- A **clean dashboard**
-    
-- A **settings page**
-    
-- Nothing fancy — but nothing sloppy
-    
-
-If someone saw your repo, they’d think:
-
-> “This person understands structure.”
-
 ---
 
 ## What You Should “Look Like” After PROJECT 2

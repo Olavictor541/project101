@@ -1,7 +1,7 @@
 // import helper functions from other files
 import { isEmailValid, isPasswordValid } from "./validator.js";
 import { showError, clearError } from "./display.js";
-import { login } from "./auth.js";
+import { createSession, login} from "./auth.js";
 
 // declare and assign variables
 const emailInput = document.getElementById("email");
@@ -11,6 +11,7 @@ const form = document.getElementById("loginForm");
 // get the error id to display it in
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
+
 
 // start an event listener for the form to listen for submission
 form.addEventListener("submit", (event) => {
@@ -38,11 +39,16 @@ form.addEventListener("submit", (event) => {
         hasError = true;
     }
 
+    if(hasError){return};
+
     // if the email and password are not the right one, display error
     if(!login(email, password)){
         showError(passwordError, "Please enter a valid email or password");
         return;
     }
+    
+    // call the token function
+    createSession()
 
     window.location.href = "pages/dashboard.html";
 
