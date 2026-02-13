@@ -1,7 +1,4 @@
-
-
-
-
+// Function to check if user is authenticated 
 export function isAuthenticated(){
     // Check if token exists
     const token = localStorage.getItem("authToken")
@@ -15,6 +12,6 @@ export function isAuthenticated(){
 
 // Logout function (remove token)
 export function logoutFunc(){
-    const rmToken = localStorage.removeItem("authToken");
-    window.location.href = "index.html"
+    localStorage.removeItem("authToken");
+    window.location.href = "../index.html"
 }
