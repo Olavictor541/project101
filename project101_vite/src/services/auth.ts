@@ -17,6 +17,6 @@ function generateRand(){
 }
 
 export function createSession(){
-    let token = generateRand();
+    const token = generateRand();
     localStorage.setItem("authToken", token);
 }
