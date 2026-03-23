@@ -16,7 +16,7 @@ function DashboardPage(){
     }
 
 
-    return(
+    return( 
         <div className="bg-gray-100 min-h-screen">
             <div className="flex min-h-screen">
                 
