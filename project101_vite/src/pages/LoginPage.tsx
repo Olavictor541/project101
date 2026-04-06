@@ -1,8 +1,10 @@
 // what are the things that can change in the login page? The emailInput, passwordInput, errorMessages. Create states for those
-import { useState } from "react";
-import { login, createSession } from "../services/auth";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../components/AuthContext";
 
 function LoginPage(){
+    const navigate = useNavigate();
     // state of email and password input
     const [email, setEmail] = useState<string>(""); // setEmail is the funcition that updates the email state 
     const [password, setPassword] = useState<string>("");
@@ -12,6 +14,13 @@ function LoginPage(){
     const [passwordError, setPasswordError] = useState<string>("");
     const [authError, setAuthError] = useState<string>("");
     
+    const { isAuthenticated, loginUser } = useAuth();
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate("/dashboard");
+        }
+    }, [isAuthenticated, navigate]);
 
     // when user types in email
     function emailChange(e: React.ChangeEvent<HTMLInputElement>){ // once user types in email, react notices the change and
@@ -48,13 +57,14 @@ function LoginPage(){
         if(hasError){return}; 
 
         // submit the form for authentication and check for error
-        if(!login(email, password)){
+        if(!loginUser(email, password)){
             setAuthError("Please enter a valid email and password");
             return;
         };
 
-        createSession();
-        window.location.href = "../../../pages/dashboard.html";
+      
+        const navigate = useNavigate();
+        navigate("/dashboard");
     
 
     }
