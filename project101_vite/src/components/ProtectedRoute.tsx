@@ -1,8 +1,14 @@
-import { isAuthenticated } from "../components/AuthContext.tsx"
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../components/AuthContext";
 
-if (!isAuthenticated){
-    window.location.href = "../pages/LoginPage.tsx"
+function ProtectedRoute({ children }) {
+    const { isAuthenticated } = useAuth();
+
+    if (!isAuthenticated) {
+        return <Navigate to="/login" />;
+    }
+
+    return children;
 }
-else{
-    window.location.href = "../pages/DashboardPage.tsx"
-}
+
+export default ProtectedRoute;

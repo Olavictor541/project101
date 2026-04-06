@@ -1,28 +1,31 @@
-import { createContext, useContext, useEffect, useState, type ReactNode} from "react";
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 import { login as loginService, createSession } from "../services/auth";
 
-// create the context type
+// Define the context type
 type AuthContextType = {
-    isAuthenticated: boolean; 
-    loginUser: (email: string, password: string) => boolean; 
-    logoutUser: () => void;
+  isAuthenticated: boolean;
+  loginUser: (email: string, password: string) => boolean;
+  logoutUser: () => void;
 };
 
-// create a variable to hold the context value, "undefined" means that the context is not yet initialized, and it will be set when the AuthProvider component is rendered
-const AuthContext = createContext<AuthContextType | undefined>(undefined); 
+// Create the context
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 type AuthProviderProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 export function AuthProvider({ children }: AuthProviderProps) {
+  // Use React state to manage authentication
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
+  // Check for session token on initial load
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     setIsAuthenticated(!!token);
   }, []);
 
+  // Function to handle user login
   function loginUser(email: string, password: string): boolean {
     const isValidUser = loginService(email, password);
 
@@ -30,12 +33,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
       return false;
     }
 
+    // Simulate session creation and update state
     createSession();
     setIsAuthenticated(true);
     return true;
   }
 
+  // Function to handle user logout
   function logoutUser() {
+    // Clear authentication state and session token
     localStorage.removeItem("authToken");
     setIsAuthenticated(false);
   }
@@ -47,6 +53,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   );
 }
 
+// Custom hook to use the AuthContext
 export function useAuth() {
   const context = useContext(AuthContext);
 
